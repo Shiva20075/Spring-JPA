@@ -1,5 +1,4 @@
 package model;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import org.springframework.context.annotation.Scope;
@@ -7,14 +6,14 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Scope("prototype")
-@Entity // in sql tables are considered as entity
+@Entity                      // In sql tables are considered as entity
 public class Student {
 
     public Student() {
-        // REQUIRED: Hibernate needs a no-arg constructor
+    // REQUIRED: Hibernate needs a no-arg constructor
     }
 
-    @Id
+    @Id  // RollNo acts as a primarykey so we put @Id
     private int rollNo;
     private String name;
     private int marks;
